@@ -17,6 +17,7 @@ def print_menu():
     for key in menu_options.keys():
         print(key, '--', menu_options[key])
 
+
 def start_menu():
     """
     Основная функция запуска программы.
