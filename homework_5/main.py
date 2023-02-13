@@ -1,5 +1,4 @@
 import menu  # менюшка
-from random import randint
 
 
 def task_1():
@@ -10,7 +9,6 @@ def task_1():
     )
     number_one = enter_numbers('Введите A')
     number_two = enter_numbers('Введите B')
-    # print(f'Число {a} в степени {b} равено: {solution_task_1(a, b)}')
     indexes = {
         "0": "\u2070", "1": "\u00B9", "2": "\u00B2", "3": "\u00B3", "4": "\u2074", "5": "\u2075", "6": "\u2076",
         "7": "\u2077", "8": "\u2078", "9": "\u2079"
@@ -35,7 +33,7 @@ if __name__ == "__main__":
     menu.start_menu()
 
 
-def enter_numbers(text, output_type=True):
+def enter_numbers(text: str, output_type=True) -> int | str:
     """
     Функция ввода значения
     :param text: текст для вывода
@@ -52,12 +50,13 @@ def enter_numbers(text, output_type=True):
         print('Ошибка введен текст\n')
     return value
 
+
 def solution_task_1(val_one: int, val_two: int) -> int:
     """
     Функция решения первой задачи
-    :param val_one:
-    :param val_two:
-    :return:
+    :param val_one: int
+    :param val_two: int
+    :return: int
     """
     if val_two == 1:
         return val_one
@@ -70,7 +69,7 @@ def solution_task_2(val_one: int, val_two: int) -> int:
     Функция решения второй задачи
     :param val_one: int
     :param val_two: int
-    :return:
+    :return: int
     """
     if val_two == 0:
         return val_one
