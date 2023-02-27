@@ -1,9 +1,11 @@
 import main
 
 menu_options = {
-    1: 'Задача 34',
-    2: 'Задача 36',
-    3: 'Exit',
+    1: 'Крестики нолики',
+    2: 'Бот телеги с калькулятором',
+    3: 'Задача 40',
+    4: 'Задача 42',
+    5: 'Exit',
 }
 
 
@@ -25,7 +27,7 @@ def start_menu():
         print_menu()
         task = ''
         try:
-            task = int(input('Введите от 1 до 3: '))
+            task = int(input('Введите от 1 до 5: '))
         except:
             print('Косячник вводи цифру.')
         # Проверка введённого числа и запуск функции в основном фаиле
@@ -34,7 +36,11 @@ def start_menu():
         elif task == 2:
             main.task_2()
         elif task == 3:
+            main.task_3()
+        elif task == 4:
+            main.task_4()
+        elif task == 5:
             print('Выходим из программы')
             exit()
         else:
-            print('Ошибка. Введите от 1 до 3.')
+            print('Ошибка. Введите от 1 до 5.')
